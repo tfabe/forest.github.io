@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Forest Restoration | Dexter, MI</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!--This meta tag makes the page responsive -->
+</head>
+
+<body> 
+ <div id="top"></div> <!-- Anchor tag -->
+  <header>
+        <div class="header-container">
+
+<!-- Hamburger Menu -->
+
+      <div class="hamburger-menu">
+        
+         <div class="hamburger-icon" id="hamburger-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div> 
+        
+          <ul class="menu-items" id="menu-items">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="FloraFauna.html">Flora & Fauna</a></li>
+            <li><a href="Invasives.html">The Uninvited</a></li>
+            <li><a href="safety.html">Safety</a></li>
+            <li><a href="volunteer.html">Volunteer</a></li>
+          </ul>
+
+      </div>
+<!-- Home Button -->
+      <div class="imghomebutton">
+        <a href="index.html">
+        <img src="../ForestRestore/Images/homebutton.png" alt="home button" class="home-btn">
+        </a>
+        </div>
+    </div>
+  </header>
+   
+   <!-- Text Box and Table and Form Container -->
+    <div class="container-wrapper">
+        <!-- Text Box Container -->
+        <div class="container_second-container">
+            <div class="text-box">
+                <h1>Join us!</h1>
+                <p>Thank you for your interest in volunteering! Review the never-ending opportunity list to see if something is of interest.  If so, please complete the form and expect a response within two business days. We appreciate you!  Bring dog treats!</p>
+            </div>
+        </div> <!-- Close container_second-container -->
+        <!-- Volunteer Table - gets smaller on smaller screens-->
+         <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Opportunity</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Opportunity">Tree Planting</td>
+                    <td data-label="Date">Nov 5</td>
+                    <td data-label="Time">9:00 AM</td>
+                </tr>
+                <tr>
+                    <td data-label="Opportunity">Invasive Removal</td>
+                    <td data-label="Date">Nov 6</td>
+                    <td data-label="Time">1:00 PM</td>
+                </tr>
+                <tr>
+                    <td data-label="Opportunity">Trail Cleanup</td>
+                    <td data-label="Date">Nov 7</td>
+                    <td data-label="Time">10:00 AM</td>
+                </tr>
+                <tr>
+                    <td data-label="Opportunity">Seed Collecting</td>
+                    <td data-label="Date">Nov 8</td>
+                    <td data-label="Time">12:00 PM</td>
+                </tr>
+                <tr>
+                    <td data-label="Opportunity">Trail Run with Stevie</td>
+                    <td data-label="Date">Nov 9</td>
+                    <td data-label="Time">2:00 PM</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+
+        <!-- Volunteer Form -->
+        <div class="volunteer-form-container">
+            <h2>Sign Up to Volunteer</h2>
+                <form action="mailto:myacct4shop@gmail.com?subject=I%20want%20to%20volunteer!" method="post" enctype="text/plain">
+    
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" required><br><br>
+
+                    <label for="contact">Contact Information (Phone Number or Address):</label><br>
+                    <input type="text" id="contact" name="contact" required><br><br>
+
+                    <label for="email">Email Address:</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+
+                    <label>Choose Your Volunteer Opportunities:</label><br>
+                    <input type="checkbox" id="tree-planting" name="opportunities" value="Tree Planting">
+                    <label for="tree-planting">Tree Planting (Nov. 5)</label><br>
+
+                    <input type="checkbox" id="invasive-removal" name="opportunities" value="Invasive Removal">
+                    <label for="invasive-removal">Invasive Removal (Nov. 6)</label><br>
+
+                    <input type="checkbox" id="trail-cleanup" name="opportunities" value="Trail Cleanup">
+                    <label for="trail-cleanup">Trail Cleanup (Nov. 7)</label><br>
+
+                    <input type="checkbox" id="seed-collecting" name="opportunities" value="Seed Collecting">
+                    <label for="seed-collecting">Seed Collecting (Nov. 8)</label><br>
+
+                    <input type="checkbox" id="trail-run" name="opportunities" value="Trail Run">
+                    <label for="trail-run">Trail Run (Nov. 9)</label><br><br>
+
+                    <input type="submit" value="Submit">
+                    </form>
+        </div>
+    </div> <!-- Close container-wrapper -->
+
+<!-- Footer-->
+
+  <footer>
+    <div class="footer-container">
+
+      <div class="footer-section" id="contact-us">
+        <h3>Contact Us</h3>
+        <p>Email: <a href="mailto:tfaber1@emich.edu">myacct4shop@gmail.com</a></p>
+        <p>Phone: <a href="tel:+1234567890">(123) 456-7890</a></p>
+      </div>
+
+      <div class="footer-section" id="helpful-links">
+        <h3>Helpful Links</h3>
+            <ul>
+              <li><a href="https://www.michigan.gov/invasives" target="_blank">MI Invasives</a></li>
+              <li><a href="https://identify.plantnet.org" target="_blank">Plant ID</a></li>
+              <li><a href="https://www.thedogwalksme.com/2022/02/27/why-a-vizsla-is-the-wrong-dog-breed-for-you/" target="_blank">Want a Vizsla?</a></li>
+              <li><a href="volunteer.html">Help!</a></li>
+              </ul>
+      </div>
+    
+      <div class="footer-section" id="back-to-top">
+        <h3>Back to Top</h3>
+          <div class="ToTop-img">
+          <a href="#top">
+          <img src="../ForestRestore/Images/up-arrow.png" alt="to-top_button">
+          </a>
+          </div>
+      </div>
+    </div>
+  
+  </footer>
+
+<!-- Script to get the hamburger menu button to expand vertically when clicked-->
+
+  <script>
+        document.getElementById('hamburger-icon').addEventListener('click', function() {
+            var menu = document.getElementById('menu-items');
+            menu.classList.toggle('show');
+        });
+  </script>
+
+</body>
+

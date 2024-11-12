@@ -1,0 +1,598 @@
+/* Tamara Faber Oct 2024 */
+
+/* START general formatting */
+
+body {
+  background-attachment: fixed; /* Keeps the background in place while scrolling */
+  background-image: url('../ForestRestore/Images/path2cropped.jpg');
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents repeating the image */
+  background-size: cover; /* Ensures the image covers the entire viewport */
+  display: flex;
+  flex-direction: column; /* Ensure the rest of the content does not overlap the header */
+  font-family: ATC-Onyx, Arial, Helvetica, sans-serif;
+  margin: 0;
+  min-height: auto; 
+  padding: 0;
+}
+
+* {box-sizing: border-box;} /*helps ensure consistent sizing and makes layouts more manageable*/
+
+
+@font-face { /* adds a font */
+  font-family: ATC-Onyx;
+  src: url("Fonts/ATCOnyxNormal.otf");
+}
+
+@font-face { /* adds a bold font */
+  font-family: ATC-OnyxBold;
+  src: url("Fonts/ATCOnyxBold.otf");
+}
+
+html, body {
+  height: 100%; /* Ensure the body and HTML take up the full height of the viewport */
+  margin: 0; /* Remove any margin */
+  overflow-y: auto; /* Allow vertical scrolling */
+}
+
+.container, .container_second-container {
+  flex: 1; /* This makes the content area take up available space */
+}
+
+/* END general formatting */
+
+
+/* START Header  Styling */
+
+/* Flexbox for the header */
+.header-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between; /* Space between the home button and hamburger menu */
+  padding: 0px 20px; /* Padding around the header content */
+}
+
+/* The navbar */
+.topnav {
+  background-color: #000;
+  overflow: hidden;
+}
+
+header {
+  background-color: #000;
+  position: sticky;
+  width: 100%;
+  z-index: 1000; /* Ensure it stays on top */
+}
+/* END Header  Styling */
+
+/* START Home Icon Styling */
+
+/* Styling for the home button image */
+.home-btn {
+  cursor: pointer;
+  height: auto;
+  width: 40px; /* Adjust size of the home button */
+}
+
+/* END Home Icon Styling */
+
+/* Start header button effect styling (home and hamburger) */
+
+/* Hover effect for the home button and hamburger button */
+.home-btn:hover, .hamburger-icon:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow to give depth */
+  transform: scale(1.1); /* Slightly enlarges the button */
+}
+
+/* Active (pressed) effect for the home button and hamburger button */
+.home-btn:active, .hamburger-icon:active{
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduce shadow to match pressed effect */
+  transform: scale(0.95); /* Slightly shrinks the button to simulate pressing */
+}
+
+.home-btn, .hamburger-icon {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* END button effect  Styling */
+
+/* START Hamburger Menu Icon Styling */
+.hamburger-menu {
+  padding: 20px;
+  position: relative;
+}
+
+/* Hamburger Icon */
+.hamburger-icon {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 30px;
+  justify-content: space-around;
+  width: 30px;
+}
+
+/* format the white bars in the hamburger icon */
+.bar {
+  background-color: #FFFFFF;
+  border-radius: 2px;
+  height: 4px;
+  transition: 0.3s; /*gradually shift to the new state over 0.3 seconds instead of changing instantly*/
+  width: 100%;
+}
+/* END Hamburger Menu Icon Formatting */
+
+/* START navigation menu items Formatting */
+
+/* Menu Items (hidden by default) */
+.menu-items {
+  background-color: rgba(249, 249, 249, 0.8); /* Semi-transparent white */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none;
+  left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 60px;
+  width: 140%;
+}
+
+.menu-items.show {
+  display: block;
+}
+
+.menu-items li {
+  font-family: "ATC-OnyxBold";
+  padding: 10px;
+  text-align: center;
+}
+
+.menu-items li a {
+  color: #333;
+  display: block;    
+  text-decoration: none;
+}
+
+.menu-items li:hover {
+  background-color: #eee;
+}
+/* END navigation menu items Formatting */
+
+/* START MENU SUBMENU Formatting */
+
+/* Style for the submenu */
+
+/* Show the submenu when hovering over the parent list item */
+li:hover .submenu {
+  display: block; /* Make the submenu visible */
+}  
+.submenu {
+  background-color: rgba(249, 249, 249, 0.9); /* Similar background as the main menu */
+  display: none; /* Hide the submenu by default */
+  left: 50%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute; /* Position it relative to the parent */
+  top: 70%; /* Position it just below the parent item */
+  width: 140%; /* Adjust the width to match the main menu */
+}
+
+.submenu li {
+  text-align: center; /* Align text in the center */
+}
+
+.submenu li a {
+  color: #333;
+  display: block; /* Ensure it takes up the full width */
+  padding: 10px;
+  text-decoration: none;
+}
+
+.submenu li:hover {
+  background-color: #eee; /* Change background on hover */
+}
+/* END SUBMENU MENU Formatting */
+
+/* ABOUT page: Start Formatting */
+
+/* Ensure the container wrapper formats and aligns both text box and picture items */
+.container-wrapper {
+  align-items: center; /* Center align items vertically */
+  display: flex;
+  flex: 1; /* Allow the main content to grow and take up available space */
+  gap: 20px; /* Optional: Space between the text box and the image */
+  justify-content: flex-start;
+  padding: 20px; /* Optional: Add padding */
+}
+
+/* Adjust the text box */
+.container_second-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 30%; /* Adjust width for the text box */
+}
+
+.text-box {
+  background-color: black;
+  border-radius: 10px;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  width: 100%; /* Make the text box responsive */
+}
+
+.text-box h1 {
+  font-size: 2.5vw; /* Scales with the viewport width */
+  margin-bottom: 10px;
+}
+
+.text-box p {
+  font-size: 1.5vw; /* Scales with the viewport width */
+}
+
+.img2 img {
+  border-radius: 5px;
+  height: auto;
+  max-width: 50%; /* Ensure the image takes up the full width */
+}
+/* END ABOUT Page Formatting */
+
+/* START FLORA AND FAUNA Page Formatting */
+
+/* Style the flora and fauna slideshow */
+
+.slideshow-container {
+  border: 5px solid black; /* Add a black border */
+  border-radius: 10px; /* Optional: Add rounded corners */max-width: 60%;
+  margin: auto;
+  width: 100%; /* Increase the width of the slideshow container */
+}
+
+.mySlides img {
+  height: auto;  /* Maintain aspect ratio */
+  width: 100%;  /* Make the images fill the container */
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Fade animation */
+.fade {
+  animation-duration: 1.5s;
+  animation-name: fade;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* Adjust the plant and animal image */
+
+.flora-img-container img {
+  border: 5px solid black; /* Add a black border around the image */
+  border-radius: 5px;
+  height: auto;
+  width: 100%; /* Set the specific width for this image */
+}
+
+/* END FLORA AND FAUNA Page Formatting */
+
+
+/* START VOLUNTEER Page Formatting */
+
+/* Volunteer table */
+/* Centering the table wrapper */
+.table-wrapper {
+  align-items: center;
+  height: auto;
+  margin: auto;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Styling the volunteer table */
+table {
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+  border: 2px solid black; /* Black border around the table */
+  border-collapse: collapse; /* Remove default spacing between cells */
+  border-radius: 10px; /* Rounded corners for a smoother look */
+  float: right; /* Moves the table to the right */
+  overflow: hidden; /* Ensure rounded corners work */
+  text-align: center; /* Center-align text */
+  width: 99%;
+}
+
+/* Table header styling */
+table th {
+  background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent white background */
+  border-bottom: 2px solid #ddd; /* Border between header and body */
+  color: white; /* White text color */
+  font-family: "ATC-OnyxBold"; /* Using the bold font */
+  padding: 15px; /* Add padding for better spacing */ 
+}
+
+/* Table body styling */
+table td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Border for rows */
+  color: white; /* White text color */
+  font-family: "ATC-OnyxBold"; /* Using the bold font */
+  padding: 10px 20px; /* Padding inside the cells */
+}
+
+/* Add hover effect on table rows */
+table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Highlight row on hover */
+}
+
+/* Volunteer Form Styling */
+.volunteer-form-container {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  border: 2px solid black;
+  border-radius: 10px;margin-top: 20px;  
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+}
+
+.volunteer-form-container h2 {
+  text-align: center;
+}
+
+.volunteer-form-container label {
+  font-weight: bold;
+}
+
+.volunteer-form-container input[type="text"],
+.volunteer-form-container input[type="email"] {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  padding: 10px;
+  width: 100%;
+}
+
+.volunteer-form-container input[type="submit"] {
+  background-color: black;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 20px;
+}
+
+.volunteer-form-container input[type="submit"]:hover {
+  background-color: darkgray;
+}
+
+/* END VOLUNTEER Page Formatting */
+
+/* START SAFETY Page Formatting */
+
+.safety-list-container, .priority-list-container {
+  background-color: rgba(255, 255, 255, 0.7); /* Same background as list */
+  border: 2px solid black; /* Same border as list */
+  border-radius: 5px; /* Rounded corners */
+  color: #333;
+  padding: 10px;
+  width: 500px; /* Adjust the width */
+  margin-bottom: 20px; /* Add space between sections */
+}
+
+.safety-list-header {
+  color: #333;
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 5px; /* Adds space between header and list */
+}
+
+/* Style for the unordered safety list */
+.safety-list {
+  background-color: rgba(255, 255, 255, 0.7); /* Optional background for readability */
+  border: 2px solid black; /* Add a black border */
+  border-radius: 5px; /* Rounded corners */
+  color: #333; /* Text color */
+  font-size: 24px; /* Adjust font size */
+  list-style-image: url('../ForestRestore/Images/tree.png'); /* Replace bullets with tree icon */
+  list-style-position: inside; /* Ensures the icon is inside the content area */
+  padding: 10px; /* Padding inside the list container */
+  padding-left: 20px; /* Adds padding to position text relative to the icon */
+  width: 475px; /* Adjust the width */
+}
+
+.safety-list li {
+  margin-bottom: 10px; /* Space between list items */
+}
+
+/* Style for the ordered safety list */
+.priority-list {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 2px solid black; /* Add a black border */
+  border-radius: 5px;
+  color: #333;
+  font-size: 24px;
+  list-style-position: inside; /* Ensures bullets are inside the background */
+  list-style-type: decimal;
+  margin-top: 20px;
+  padding: 10px;
+  padding-left: 20px;
+  width: 475px;
+}
+
+.priority-list li {
+  margin-bottom: 10px;
+}
+
+/* END SAFETY Page Formatting */
+
+
+/* START FOOTER Styling */
+
+footer {
+  align-items: center;
+  background-color: #000; /* Black background for the footer */
+  bottom: 0;
+  color: #f2f2f2; /* Light text color */
+  display: flex;
+  justify-content: space-between; /* Distribute the sections evenly */
+  left: 0;
+  padding: 0px 15px; /* Reduced padding for a smaller footer */
+  position: relative;
+  width: 100%; /* Full width */
+  z-index: 1000;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footer-section {
+  font-size: 14px; /* Smaller font size */
+  text-align: center;
+}
+/*header text styling in footer*/
+
+.footer-section h3 {
+  font-size: 16px; /* Smaller header size */
+  margin-bottom: 5px;
+}
+
+/*contact us styling in footer non-header text (like email, links)*/
+
+.footer-section a, .footer-section p {
+  color: #f2f2f2; /* White text */
+  font-size: 14px; /* Smaller font size for links and contact info */
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline; /* Add underline effect on hover */
+}
+
+#helpful-links ul {
+  list-style: none;
+  margin:0;
+  padding: 0;
+}
+
+#helpful-links li {
+  display: inline-block; /* Make the list items display inline */
+  margin-bottom: 10px; /* Space between the rows */
+  width: 45%; /* Each item takes about half the width of the container */
+}
+
+#helpful-links a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Style the Back to Top button */
+.ToTop-img a img {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover and active effects */
+}
+
+/* Hover effect for the Back to Top button */
+.ToTop-img a img:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow to give depth */
+  transform: scale(1.1); /* Slightly enlarges the button */
+}
+
+/* Active (pressed) effect for the Back to Top button */
+.ToTop-img a img:active {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduce shadow to match pressed effect */
+  transform: scale(0.95); /* Slightly shrinks the button to simulate pressing */
+}
+
+/* END FOOTER Styling */
+
+
+/*Responsive Design*/ /* Media query for mobile screens */
+@media screen and (max-width: 768px) {
+
+.container-wrapper {
+  align-items: center; /* Center the content horizontally */
+  flex-direction: column; /* Stack items vertically */
+  gap: 20px; /* Keep space between elements */
+  justify-content: center; /* Center the content vertically */
+  padding: 20px;
+  }
+
+.container_second-container {
+  max-width: 100%;
+  width: 100%; /* Full width on mobile */
+  }
+
+.img2 img {
+  height: auto; /* Make the image responsive */
+  max-width: 70%;
+  }
+
+.text-box {
+  max-width: 90%; /* Center the text box with a little padding */
+  padding: 15px;
+  width: 100%; /* Take full width */
+  }
+
+.text-box, .img2 {
+  max-width: 90%; /* Keep some padding on the sides */
+  width: 100%; /* Take full width on mobile */
+  }
+
+.text-box h1 {
+  font-size: 5vw; /* Larger font size for smaller screens */
+  }
+
+.text-box p {
+  font-size: 3.5vw; 
+  }
+
+.slideshow-container {
+  border-radius: 5px; /* Make corners less rounded */
+  margin: auto; /* Center the container */
+  max-width: 90%; /* Ensure the container expands on smaller screens */
+  padding: 5px; /* Reduce padding if needed */
+  width: 90%; /* Make the slideshow container larger */
+  }
+  
+.mySlides img {
+  height: auto; /* Maintain aspect ratio */
+  width: 100%; /* Ensure the images still take full width */
+  }
+
+.invasives-img img {
+  content: url('../ForestRestore/Images/poisonivy.jpeg'); /* Switch to the ivy image for the Uninvited page */
+  }
+
+.dog-img img {
+  content: url('../ForestRestore/Images/StevieFront.jpg'); /* Switch to one dog image for About page */
+  }
+
+.safety-list-container, .priority-list-container {
+  margin: 20px auto; /* Center the containers and add vertical space */
+  padding: 10px; /* Reduce padding for better fit */
+  width: 90%; /* Make the containers take up 90% of the screen width */
+  }
+
+.safety-list-header {
+  font-size: 18px; /* Adjust header size */
+  }
+
+.safety-list, .priority-list {
+  font-size: 16px; /* Adjust the font size for the list items */
+  list-style-position: inside;
+  width: 90%; /* Make the containers take up 90% of the screen width */
+  }
+
+  }
+

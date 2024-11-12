@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Forest Restoration | Dexter, MI</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!--This meta tag makes the page responsive -->
+</head>
+
+<body> 
+ <div id="top"></div> <!-- Anchor tag -->
+  <header>
+    <div class="header-container">
+
+      <!-- Hamburger Menu -->
+      <div class="hamburger-menu">
+        
+         <div class="hamburger-icon" id="hamburger-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div> 
+        
+          <ul class="menu-items" id="menu-items">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="FloraFauna.html">Flora & Fauna</a></li>
+            <li><a href="Invasives.html">The Uninvited</a></li>
+            <li><a href="safety.html">Safety</a></li>
+            <li><a href="volunteer.html">Volunteer</a></li>
+          </ul>
+
+      </div>     <!-- closes hamburger menu -->
+
+      <!-- Home Button -->
+      <div class="imghomebutton">
+        <a href="index.html">
+        <img src="../ForestRestore/Images/homebutton.png" alt="home button" class="home-btn">
+        </a>
+      </div>
+    </div>
+  </header>
+   
+    <!-- Text Box and Picture Container Wrapper -->
+    <div class="container-wrapper">
+    
+      <!-- Text Box Container -->
+      <div class="container_second-container">
+        <div class="text-box">
+         <h1>About Us</h1>
+         <p>We are a mighty team of two. Stevie, my partner, is a VERY energetic Vizsla.</p>
+        </div>
+      </div>
+
+      <!-- Dog Image -->
+      <div class="flora-img-container dog-img">
+        <img src="../ForestRestore/Images/SteviePics.png" alt="pictures of a Vizsla">
+      </div>      
+    </div> <!-- Closes Text & Picture Container Wrapper -->
+
+<!-- Footer-->
+
+  <!-- Footer-->
+
+  <footer>
+    <div class="footer-container">
+
+      <div class="footer-section" id="contact-us">
+        <h3>Contact Us</h3>
+        <p>Email: <a href="mailto:tfaber1@emich.edu">myacct4shop@gmail.com</a></p>
+        <p>Phone: <a href="tel:+1234567890">(123) 456-7890</a></p>
+      </div>
+
+      <div class="footer-section" id="helpful-links">
+        <h3>Helpful Links</h3>
+            <ul>
+              <li><a href="https://www.michigan.gov/invasives" target="_blank">MI Invasives</a></li>
+              <li><a href="https://identify.plantnet.org" target="_blank">Plant ID</a></li>
+              <li><a href="https://www.thedogwalksme.com/2022/02/27/why-a-vizsla-is-the-wrong-dog-breed-for-you/" target="_blank">Want a Vizsla?</a></li>
+              <li><a href="volunteer.html">Help!</a></li>
+              </ul>
+      </div>
+    
+      <div class="footer-section" id="back-to-top">
+        <h3>Back to Top</h3>
+          <div class="ToTop-img">
+          <a href="#top">
+          <img src="../ForestRestore/Images/up-arrow.png" alt="to-top_button">
+          </a>
+          </div>
+      </div>
+    </div>
+  
+  </footer>
+
+  <!-- Script to get the hamburger menu button to expand vertically when clicked-->
+
+  <script>
+        document.getElementById('hamburger-icon').addEventListener('click', function() {
+            var menu = document.getElementById('menu-items');
+            menu.classList.toggle('show');
+        });
+  </script>
+
+</body>
+
