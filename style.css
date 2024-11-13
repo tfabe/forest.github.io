@@ -4,7 +4,7 @@
 
 body {
   background-attachment: fixed; /* Keeps the background in place while scrolling */
-  background-image: url('../ForestRestore/Images/path2cropped.jpg');
+  background-image: url('Images/path2cropped.jpg');
   background-position: center; /* Centers the background image */
   background-repeat: no-repeat; /* Prevents repeating the image */
   background-size: cover; /* Ensures the image covers the entire viewport */
@@ -571,11 +571,11 @@ footer {
   }
 
 .invasives-img img {
-  content: url('../ForestRestore/Images/poisonivy.jpeg'); /* Switch to the ivy image for the Uninvited page */
+  content: url('Images/poisonivy.jpeg'); /* Switch to the ivy image for the Uninvited page */
   }
 
 .dog-img img {
-  content: url('../ForestRestore/Images/StevieFront.jpg'); /* Switch to one dog image for About page */
+  content: url('Images/StevieFront.jpg'); /* Switch to one dog image for About page */
   }
 
 .safety-list-container, .priority-list-container {
