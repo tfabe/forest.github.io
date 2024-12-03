@@ -402,7 +402,7 @@ table tbody tr:hover {
   border-radius: 5px; /* Rounded corners */
   color: #333; /* Text color */
   font-size: 24px; /* Adjust font size */
-  list-style-image: url('../Images/tree.png'); /* Replace bullets with tree icon */
+  list-style-image: url('Images/tree.png'); /* Replace bullets with tree icon */
   list-style-position: inside; /* Ensures the icon is inside the content area */
   padding: 10px; /* Padding inside the list container */
   padding-left: 20px; /* Adds padding to position text relative to the icon */
